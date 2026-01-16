@@ -15,7 +15,12 @@ export function isValidEmail(email: string) {
         return false;
     }
 
-    if(email === "@email.com"){
+    const atIndex = email.indexOf("@");
+
+    const beforAt = email.substring(0, atIndex);
+    //const afterAt = email.substring(atIndex + 1);
+
+    if(beforAt.length === 0){
         return false;
     }
 
