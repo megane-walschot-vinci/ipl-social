@@ -18,9 +18,9 @@ export function isValidEmail(email: string) {
     const atIndex = email.indexOf("@");
 
     const beforAt = email.substring(0, atIndex);
-    //const afterAt = email.substring(atIndex + 1);
+    const afterAt = email.substring(atIndex + 1);
 
-    if(beforAt.length === 0){
+    if(beforAt.length === 0 || afterAt.length === 0){
         return false;
     }
 

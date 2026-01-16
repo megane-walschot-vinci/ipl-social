@@ -45,4 +45,9 @@ describe("Validation d'email", () => {
         email = "@email.com";
         expect(isValidEmail(email)).toBe(false);
     });
+
+    test("email without text after '@'", () => {
+        email = "test.dot@";
+        expect(isValidEmail(email)).toBe(false);
+    });
 });
