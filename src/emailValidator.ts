@@ -11,7 +11,7 @@ export function isValidEmail(email: string) {
         return false;
     }
 
-    if(email === "test@email. com"){
+    if(email.includes(" ")){
         return false;
     }
 
