@@ -18,7 +18,7 @@ describe("Validation d'email", () => {
 
     test("without @ (testemail.com)", () => {
         email = "test.com";
-        expect(isValidEmail(email)).toBe(true);
+        expect(isValidEmail(email)).toBe(false);
     });
     
 });
