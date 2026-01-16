@@ -35,4 +35,9 @@ describe("Validation d'email", () => {
         email = "test@email";
         expect(isValidEmail(email)).toBe(false);
     });
+
+    test("with space", () => {
+        email = "test@email. com";
+        expect(isValidEmail(email)).toBe(false);
+    });
 });
