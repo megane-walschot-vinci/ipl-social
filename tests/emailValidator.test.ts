@@ -40,4 +40,9 @@ describe("Validation d'email", () => {
         email = "test@email. com";
         expect(isValidEmail(email)).toBe(false);
     });
+
+    test("email without text befor '@'", () => {
+        email = "@email.com";
+        expect(isValidEmail(email)).toBe(false);
+    });
 });
