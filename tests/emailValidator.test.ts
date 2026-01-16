@@ -9,8 +9,16 @@ import { isValidEmail } from "../src/emailValidator";
 
 //a.
 describe("Validation d'email", () => {
-    test("email valide (test@email.com)", () => {
-        const email: string = "test@email.com"; 
+    let email: string;
+
+    test("valid email (test@email.com)", () => {
+        email = "test@email.com"; 
         expect(isValidEmail(email)).toBe(true);
     });
+
+    test("without @ (testemail.com)", () => {
+        email = "test.com";
+        expect(isValidEmail(email)).toBe(true);
+    });
+    
 });
