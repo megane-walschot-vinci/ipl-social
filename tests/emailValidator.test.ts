@@ -31,4 +31,8 @@ describe("Validation d'email", () => {
         expect(isValidEmail(email)).toBe(false);
     });
     
+    test("without dot", () => {
+        email = "test@email";
+        expect(isValidEmail(email)).toBe(false);
+    });
 });
