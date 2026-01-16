@@ -20,5 +20,15 @@ describe("Validation d'email", () => {
         email = "test.com";
         expect(isValidEmail(email)).toBe(false);
     });
+
+    test("at least one dot in domain name (not last char)", () => {
+        email = "test@email.com";
+        expect(isValidEmail(email)).toBe(true);
+    });
+
+    test("at least one dot (at last char)", () => {
+        email = "test@email.";
+        expect(isValidEmail(email)).toBe(false);
+    });
     
 });

@@ -3,5 +3,9 @@ export function isValidEmail(email: string) {
         return false;
     }
     
+    if(email.charAt(email.length-1) === '.'){
+        return false;
+    }
+
     return true;
 }
